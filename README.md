@@ -1,7 +1,7 @@
 # Twitter_quote_bot
 A project for webscraping Goodreads for quotes, and automatically posting them on Twitter. 
 
-This was a fun project to practice webscraping using BeautifulSoup, parsing through webpage contents and interacting with Twitter API. The code is run indefinitely on pythonanywhere.com. You can find my implementation at https://twitter.com/PhilosClassica.
+This was a fun project to practice webscraping using BeautifulSoup, parsing through webpage contents and interacting with Twitter API (In addition to webscraping, I implemented OOP for better coding practice - see TwitterOOP.py). The code is run indefinitely on pythonanywhere.com. You can find my implementation at https://twitter.com/PhilosClassica.
 
 ## Instructions:
 1. Run the Webscraper.py. Add your own authors, and make sure to scan webpapge URLs to obtain the specific page ID. Add them to the author dictionary. After making HTTP requests, it will compile all quotes into a list. Once cleaned, it will then create text files with all the quotes that have been wrangled. 
