@@ -7,14 +7,12 @@ class twitter_bot:
         self.name = name
         self.page_id = page_id
 
-    # Instance method
     def get_page(self, iteration):
         """Function to make http request from Goodreads.com, and pull webpage contents. """
         page = requests.get("https://www.goodreads.com/author/quotes/" + self.page_id + "." + self.name + "?page={}".format(iteration))
         soup = BeautifulSoup(page.content, 'html.parser')
         return soup
 
-    # Another instance method
     def get_quote(self, soup):
         """Function to parse webpage contents to find quotes. """
         short_descs = [i.get_text() for i in soup.select(".quoteText")]
