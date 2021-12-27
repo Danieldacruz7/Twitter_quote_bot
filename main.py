@@ -45,7 +45,7 @@ def test_tweet(quotes_file, name_in_list):
 """
 
 while True:
-    """This loop continously indefinitely. """
+    """This loop continues indefinitely. """
 
     x = random.randint(0, number_of_authors-1)
     author_name = author_list[x]
