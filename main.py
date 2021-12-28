@@ -40,7 +40,7 @@ def test_tweet(quotes_file, name_in_list):
     
     A while loop is implemented for continous deployment,
     and is scheduled to tweet automatically every 6 hours.  
-    It will randomly selected a file of quotes, and select a random 
+    It will randomly select a file of quotes, and select a random 
     quote from the aforementioned text file. 
 """
 
