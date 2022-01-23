@@ -7,7 +7,8 @@ This was a fun project to practice webscraping using BeautifulSoup, parsing thro
 In order for the project to run successfully, make sure to install the following libraries:
 - Tweepy
 - BeautifulSoup
-Use pip install to install libraries. 
+
+Use pip install to install libraries.
 
 ## Instructions:
 1. Run the Webscraper.py. Add your own authors, and make sure to scan webpapge URLs to obtain the specific page ID. Add them to the author dictionary. After making HTTP requests, it will compile all quotes into a list. Once cleaned, it will then create text files with all the quotes that have been wrangled.
