@@ -17,9 +17,9 @@ key = "xxxxxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 """Below is the code for using Twitter API"""
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(key, secret)
-api = tweepy.API(auth)
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret) # Handles user authentication
+auth.set_access_token(key, secret) # assigns access token to interact with API
+api = tweepy.API(auth) # stores API information 
 
 author_list = [i for i in author_dictionary]
 number_of_authors = len(author_list)
