@@ -1,4 +1,4 @@
-import tweepy
+import tweepy # import library for interacting with Twitter
 import time
 import random
 from Webscraper import author_dictionary
@@ -21,13 +21,21 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(key, secret)
 api = tweepy.API(auth)
 
-author_list = []
-for i in author_dictionary:
-    author_list.append(i)
+author_list = [i for i in author_dictionary]
 number_of_authors = len(author_list)
 
 def automate_tweet(quotes_file, name_in_list):
-    """Function for sending Tweet via API. """
+    """
+    Retrieves quote and its author for the text file, 
+    and uploads the data using the Twitter API. 
+
+    Args: 
+        quotes_file - the file containing a quote. 
+        name_in_list - name of randomly selected author. 
+
+    Returns: 
+        None
+    """
     api.update_status('{}\n\n - {}'.format(quotes_file[y], name_in_list))
 
 def test_tweet(quotes_file, name_in_list):
@@ -44,8 +52,7 @@ def test_tweet(quotes_file, name_in_list):
     quote from the aforementioned text file. 
 """
 
-while True:
-    """This loop continues indefinitely. """
+while True: # Loop runs indefintely
 
     x = random.randint(0, number_of_authors-1)
     author_name = author_list[x]
