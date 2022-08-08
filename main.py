@@ -39,10 +39,21 @@ def automate_tweet(quotes_file, name_in_list):
     api.update_status('{}\n\n - {}'.format(quotes_file[y], name_in_list))
 
 def test_tweet(quotes_file, name_in_list):
-    """Function is used to test the output of each tweet. """
+    """
+    Retrieves quote and its author for the text file, 
+    and uploads the data without using the Twitter API. 
+
+    Args: 
+        quotes_file - the file containing a quote. 
+        name_in_list - name of randomly selected author. 
+
+    Returns: 
+        None
+    """
     print("{}\n\n - {}".format(quotes_file[y], name_in_list))
 
-"""
+while True:
+    """
     Main portion of tweet automation. 
     This code is hosted on pythonanywhere.com.
     
@@ -50,9 +61,7 @@ def test_tweet(quotes_file, name_in_list):
     and is scheduled to tweet automatically every 6 hours.  
     It will randomly select a file of quotes, and select a random 
     quote from the aforementioned text file. 
-"""
-
-while True: # Loop runs indefintely
+    """
 
     x = random.randint(0, number_of_authors-1)
     author_name = author_list[x]
